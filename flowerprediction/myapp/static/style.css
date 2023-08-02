@@ -1,0 +1,97 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+
+.form {
+	max-width: 270px;
+	font-family: monospace;
+	font-weight: normal;
+	line-height: 1.625;
+	margin: 8px auto;
+	padding-left: 16px;
+	z-index: 2;
+}
+
+h2 {
+	font-size: 18px;
+	margin-bottom: 8px;
+	font-family: monospace;
+}
+.size{
+	font-family: monospace;
+  outline: 0;
+  background: #f2f2f2;
+  width: 76%;
+  border: 0;
+  margin: 0 0 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 15px;
+  height: 35px;
+  border-radius: 5px;
+}
+
+.my-button{
+  background: #c871fe;
+  width: 76%;
+  border: 0;
+  margin: 25px 0 10px;
+  box-sizing: border-box;
+  font-size: 15px;
+	height: 35px;
+	text-align: center;
+	border-radius: 5px;
+}
+
+.result {
+  width: 45rem;
+  border: 0;
+  margin: 25px 0 10px;
+  box-sizing: border-box;
+  font-size: 15px;
+  height: 3rem;
+  margin-left: 31rem;
+  text-align: center;
+  font-family: monospace;
+}
+
+.result h1 {
+  margin-left: -16rem;
+  color: white;
+}
+.result h3 {
+  font-weight: 300;
+  font-size: 18px;
+  margin-left: -16rem;
+  letter-spacing: 0.025rem;
+}
+.result h3 b{
+  color: white;
+}
+.img {
+  background: url('https://images.unsplash.com/photo-1654440483403-88c5ec8c7201?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nzd8fGlyaXMlMjBmbG93ZXJzJTIwbGFuZHNjYXBlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60');
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-size:100% 100%;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px); 
+  filter: blur(15px);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+body, html {
+  height: 90%;
+}
+.title{
+font-size: 3rem;
+    margin-left: 30rem;
+    margin-bottom: 3rem;
+    color: #6c00af;
+    font-family: monospace;
+}

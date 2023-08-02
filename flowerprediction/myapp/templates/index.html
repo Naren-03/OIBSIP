@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Iris Flower Detection</title>
+	{% load static %}
+	<link rel="stylesheet" href="{%static 'style.css'%}">
+</head>
+<body style="background-color:gray;">
+<div class="img"></div>
+<div class="title">Iris Flower Detection</div>
+<form class="form" method="POST" >
+	{% csrf_token %}
+	<h2>Seppal Width</h2>
+    <input class="size"  type="text"  class="floatLabel" name="swidth"required>
+	<h2>Sepal Height</h2>
+    <input class="size"  type="text"  class="floatLabel" name="sheight"required >
+	<h2>Petal Width</h2>
+    <input class="size"  type="text"  class="floatLabel" name="pwidth"required >
+	<h2>Petal Height</h2>
+    <input class="size"  type="text"  class="floatLabel" name="pheight" required>
+	<button class="my-button" type="submit">Estimate Iris Flower Type</button>
+</form>
+	<div id="uiEstimatedPrice" class="result"><h3>Type of Iris Flower is </h3> <h1>{{Data}}</h1> </div>
+</body>
+</html>

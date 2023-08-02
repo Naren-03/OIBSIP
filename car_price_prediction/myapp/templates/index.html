@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Price Prediction</title>
+    {% load static  %}
+    <link rel="stylesheet" href="{%static 'style.css'%}">
+</head>
+
+<style>
+in
+</style>
+
+
+<body style="background-color:gray;">
+    <div class="img"></div>
+    <h2 class="title">Car Price Prediction</h2>
+    <form class="form" method="POST">
+        <label for="symboling">Symboling:</label>
+        <input type="number" name="symboling" id="symboling">
+
+        <label for="doornumber">Doornumber:</label>
+        <input type="number" name="doornumber" id="doornumber">
+
+        <label for="wheelbase">Wheelbase:</label>
+        <input type="number" name="wheelbase" id="wheelbase">
+
+        <label for="carlength">Car Length:</label>
+        <input type="number" name="carlength" id="carlength" placeholder="cm">
+
+        <label for="carwidth">Car Width:</label>
+        <input type="number" name="carwidth" id="carwidth" placeholder="cm">
+
+        <label for="carheight">Car Height:</label>
+        <input type="number" name="carheight" id="carheight" placeholder="cm">
+
+        <label for="cylindernumber">Cylinder Number:</label>
+        <input type="number" name="cylindernumber" id="cylindernumber">
+
+        <label for="enginesize">Engine Size:</label>
+        <input type="number" name="enginesize" id="enginesize" placeholder="cm">
+
+        <label for="boreratio">Bore Ratio:</label>
+        <input type="number" name="boreratio" id="boreratio">
+
+        <label for="stroke">Stroke:</label>
+        <input type="number" name="stroke" id="stroke" placeholder="mm">
+
+        <label for="compressionratio">Compression Ratio:</label>
+        <input type="number" name="compressionratio" id="compressionratio">
+
+        <label for="horsepower">Horsepower:</label>
+        <input type="number" name="horsepower" id="horsepower" placeholder="hp">
+
+        <label for="citympg">City MPG:</label>
+        <input type="number" name="citympg" id="citympg" placeholder="mpg">
+
+        <label for="highwaympg">Highway MPG:</label>
+        <input type="number" name="highwaympg" id="highwaympg" placeholder="mpg">
+        
+        <label for="peakrpm">Peak RPM:</label>
+        <input type="number" name="peakrpm" id="peakrpm" placeholder="rpm">
+        
+        <label for="curbweight">Curb Weight:</label>
+        <input type="number" name="curbweight" id="curbweight" placeholder="kg">
+        
+       
+           
+        
+        <div class="radio-1">
+            <label for="normalized_curbweight">Car Brand</label>
+			<select class="location" name="cars" id="uiLocations" required>
+                <option value="" disabled="disabled" selected="selected" >Select</option>
+                {% for i in cars%}
+				<option>{{i}}</option>
+				{% endfor %} 
+			</select>
+            <label for="normalized_curbweight">Fuel System Type</label>
+			<select class="location" name="fuel_system" id="uiLocations" required>
+                <option value="" disabled="disabled" selected="selected" >Select</option>
+                {% for i in fuel%}
+				<option>{{i}}</option>
+				{% endfor %} 
+			</select>
+            <label for="normalized_curbweight">Engine Type</label>
+			<select class="location" name="engine" id="uiLocations" required>
+                <option value="" disabled="disabled" selected="selected" >Select</option>
+                {% for i in engine%}
+				<option>{{i}}</option>
+				{% endfor %} 
+			</select>
+        </div>
+        <div class="radio-1">
+            <label for="normalized_curbweight">Drive Wheel Type</label>
+			<select class="location" name="drive" id="uiLocations" required>
+                <option value="" disabled="disabled" selected="selected" >Select</option>
+                {% for i in drive%}
+				<option>{{i}}</option>
+				{% endfor %} 
+			</select>
+            
+            <label for="normalized_curbweight">Aspiration Type</label>
+            <select class="location" name="asp" id="uiLocations" required>
+                <option value="" disabled="disabled" selected="selected" >Select</option>
+                {% for i in asp_type%}
+				<option>{{i}}</option>
+				{% endfor %} 
+            </select>
+            
+            <label for="normalized_curbweight">Fuel Type</label>
+            <select class="location" name="ftype" id="uiLocations" required>
+                <option value="" disabled="disabled" selected="selected" >Select </option>
+                {% for i in fuel_type%}
+				<option>{{i}}</option>
+				{% endfor %} 
+            </select>
+        </div>
+        <button type="submit" class="image-button">
+            {%load static%}
+            <img src="{%static 'car.png'%}">
+            <h2>Click to Estimate </h2>
+        </button>
+        
+        <div class="result">
+            <h3> Price of <b> <u>{{Details.21}}</u></b> Car with following features </h3>
+        </div>
+        <div class="table-content" >
+            
+            
+            <table style="margin-right: 10px;">
+                <tr><td><b>Symboling:</b></td><td>{{Details.0}}</td></tr>
+                <tr><td><b>Doornumber:</b></td><td>{{Details.1}}</td></tr>
+                <tr><td><b>Wheelbase:</b></td><td>{{Details.2}}cm</td></tr>
+            </table>
+            
+            <table style="margin-right: 10px;">
+                <tr><td><b>CarLength:</b></td><td>{{Details.3}}cm</td></tr>
+                <tr><td><b>CarWidth:</b></td><td>{{Details.4}}cm</td></tr>
+                <tr><td><b>CarHeight:</b></td><td>{{Details.5}}cm</td></tr>
+            </table>
+            
+            <table style="margin-right: 10px;">
+                <tr><td><b>CylinderNumbers:</b></td><td>{{Details.6}}</td></tr>
+                <tr><td><b>EngineSize:</b></td><td>{{Details.7}}cm</td></tr>
+                <tr><td><b>BoreRatio:</b></td><td>{{Details.8}}</td></tr>
+            </table>
+            
+            <table style="margin-right: 10px;">
+                <tr><td><b>Stroke:</b></td><td>{{Details.9}}mm</td></tr>
+                <tr><td><b>Compressionratio:</b></td><td>{{Details.10}}</td></tr>
+                <tr><td><b>Horsepower:</b></td><td>{{Details.11}}hp</td></tr>
+            </table>
+            
+            <table style="margin-right: 10px;">
+                <tr><td><b>Citympg:</b></td><td>{{Details.12}}mpg</td></tr>
+                <tr><td><b>Highwaympg:</b></td><td>{{Details.13}}mpg</td></tr>
+                <tr><td><b>Peakrpm:</b></td><td>{{Details.14}}rpm</td></tr>
+            </table>
+            
+            <table style="margin-right: 10px;">
+                <tr><td><b>CurbeWeight:</b></td><td>{{Details.15}}kg</td></tr>
+                <tr><td><b>FuelType:</b></td><td>{{Details.16}}</td></tr>
+                <tr><td><b>AspirationType:</b></td><td>{{Details.17}}</td></tr>
+            </table>
+            
+            <table  style="margin-right: 10px;">
+                <tr><td><b>DriveWheelType:</b></td><td>{{Details.18}}</td></tr>
+                <tr><td><b>EngineType:</b></td><td>{{Details.19}}</td></tr>
+                <tr><td><b>FuelSystemType:</b></td><td>{{Details.20}}</td></tr>
+            </table>
+        </div>
+        
+        
+        </form>
+
+        <div id="uiEstimatedPrice" class="result">
+            <h1><b> <u>{{Price}} Lakh</h1>
+            </div>
+        </body>
+        </html>
+        

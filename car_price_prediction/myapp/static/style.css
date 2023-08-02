@@ -1,0 +1,179 @@
+label {
+    display: inline-block;
+    width: 170px;
+    text-align: right;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 150px;
+    margin-bottom: 2rem;
+    height: 25px;
+    border-radius: 5px;
+
+}
+input::placeholder{
+  text-align:right ;
+}
+
+.location{
+  font-family: monospace;
+  outline: 0;
+  background: #f2f2f2;
+  width: 160px;
+  border: 0;
+  margin: 0 0 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 15px;
+  height: 35px;
+  border-radius: 5px;
+  margin-left: 0.6rem;
+}
+
+table {
+  border-collapse: collapse;
+  border: 1.5px solid rgb(255, 255, 255);
+}
+
+th, td {
+  border: 1px solid rgb(255, 255, 255);
+  padding: 8px;
+  width: 4px;
+}
+
+.form {
+font-family: monospace;
+font-weight: normal;
+line-height: 1.625;
+margin: 8px auto;
+padding-left: 16px;
+z-index: 2;
+}
+
+.my-button{
+background: #c871fe;
+width: 150px;
+border: 0;
+margin: 25px 0 10px;
+font-size: 15px;
+height: 35px;
+text-align: center;
+border-radius: 5px;
+margin-left:12rem;
+}
+
+
+.result {
+    width: 45rem;
+    border: 0;
+    margin: 25px 0 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    height: 3rem;
+    margin-left: 3rem;
+    text-align: center;
+    font-family: monospace;
+    margin-top: 1rem;
+  }
+  
+.result h1 {
+    margin-left: 20rem;
+    color: rgb(255, 255, 255);
+    width: 100%;
+  }
+.result h3 {
+    font-weight: 300;
+    font-size: 18px;
+    margin-left: 20rem;
+    width: 100%;
+    letter-spacing: 0.025rem;
+    margin-top: -2rem;
+    color: white;
+  }
+.result h3 b{
+    color: rgb(255, 255, 255);
+  }
+
+.radio-1{
+  display: inline-table;
+  }
+  .radio-1 h2{
+    display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+  }
+
+
+/* Apply general styles to the button */
+button.image-button {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  margin-left: 1150px;
+  margin-top: -8rem;
+}
+button.image-button h2{
+    margin-top: 8rem;
+    margin-left: -11rem;
+}
+  /* Set the image as the background of the button */
+  button.image-button img {
+    width: 60%; 
+    object-fit: cover; /* Adjust the image's size to cover the button area */
+    border-radius: 4px; /* Optional: Add border radius for rounded corners */
+    margin-top: 2rem;
+  }
+  
+  /* Add some hover effect (optional) */
+  button.image-button:hover img {
+    opacity: 0.8; 
+  }
+
+
+.table-content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 14px;
+  color: white;
+}
+
+.title{
+  font-size: 2rem;
+  margin-top: -0.5rem;
+      margin-bottom: 2rem;
+      color: #ffffff;
+      font-family: monospace;
+      text-align: center;
+  }
+
+.image-button h2{
+  color: white;
+}
+  .img {
+    background: url('img.jpg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-size:100% 100%;
+    /* -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px); 
+    filter: blur(3px); */
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
